@@ -1,0 +1,202 @@
+  *{scroll-behavior:smooth;}
+  body{background:#0A0A0A; color:#fff; font-family:'Inter',sans-serif; overflow-x:hidden;}
+
+  /* loading screen */
+  #loader{position:fixed; inset:0; background:#0A0A0A; z-index:9999; display:flex; align-items:center; justify-content:center; transition:opacity .5s ease, visibility .5s ease;}
+  #loader .mark{font-weight:900; font-size:14px; letter-spacing:.3em; color:#4C6EF5;}
+  #loader.hide{opacity:0; visibility:hidden;}
+
+  /* scroll progress */
+  #progress{position:fixed; top:0; left:0; height:3px; background:linear-gradient(90deg,#4C6EF5,#8AA3FF); z-index:9998; width:0%; transition:width .1s linear;}
+
+  /* nav */
+  #navbar{position:fixed; top:0; left:0; right:0; z-index:100; transition:background .35s ease, backdrop-filter .35s ease, border-color .35s ease, padding .35s ease;}
+  #navbar.scrolled{background:rgba(10,10,10,0.75); backdrop-filter:blur(16px); border-bottom:1px solid rgba(255,255,255,0.08);}
+
+  .navlink{position:relative; font-weight:500;}
+  .navlink::after{content:""; position:absolute; left:0; bottom:-4px; width:0; height:1px; background:#4C6EF5; transition:width .25s ease;}
+  .navlink:hover::after{width:100%;}
+
+  /* glass card */
+  .glass{background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); backdrop-filter:blur(14px);}
+
+  /* hero */
+  .hero-bg{
+    background:
+      linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.75) 55%, #0A0A0A 100%),
+      radial-gradient(ellipse 1200px 700px at 75% 20%, rgba(76,110,245,0.22), transparent 60%),
+      radial-gradient(circle at 15% 85%, rgba(76,110,245,0.12), transparent 55%),
+      repeating-linear-gradient(120deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 60px),
+      #0A0A0A;
+  }
+  .float{animation:floaty 6s ease-in-out infinite;}
+  @keyframes floaty{0%,100%{transform:translateY(0);} 50%{transform:translateY(-16px);}}
+  .float-slow{animation:floaty 8s ease-in-out infinite; animation-delay:.5s;}
+
+  .glow-btn{transition:box-shadow .3s ease, transform .3s ease;}
+  .glow-btn:hover{box-shadow:0 0 40px rgba(76,110,245,0.55); transform:translateY(-2px);}
+
+  /* reveal */
+  .reveal{opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+  .stagger > *{transition-delay:calc(var(--i,0) * 90ms);}
+
+  /* card hover elevation */
+  .lift{transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;}
+  .lift:hover{transform:translateY(-8px); box-shadow:0 24px 60px rgba(0,0,0,0.55); border-color:rgba(76,110,245,0.5);}
+
+  .img-zoom{overflow:hidden;}
+  .img-zoom img, .img-zoom .ph{transition:transform .6s ease;}
+  .img-zoom:hover img, .img-zoom:hover .ph{transform:scale(1.08);}
+
+  /* photo placeholder pattern (no external images used) */
+  .ph{
+    width:100%; height:100%;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(76,110,245,0.35), transparent 45%),
+      repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 18px),
+      linear-gradient(160deg, #1a1a1a, #0A0A0A);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;
+    color:rgba(255,255,255,0.32); font-size:11px; letter-spacing:.14em; text-transform:uppercase; text-align:center; padding:10px;
+  }
+  .ph .ph-icon{ opacity:0.5; }
+  .ph .ph-note{ font-size:9px; letter-spacing:.1em; color:rgba(255,255,255,0.2); text-transform:none; }
+  .real-photo{width:100%; height:100%; object-fit:cover; display:block;}
+
+  .pill{border-radius:999px;}
+
+  /* testimonial slider */
+  .t-track{display:flex; transition:transform .6s ease;}
+  .t-slide{flex:0 0 100%;}
+
+  /* faq */
+  .faq-item[open] summary .chev{transform:rotate(45deg);}
+  summary{cursor:pointer; list-style:none;}
+  summary::-webkit-details-marker{display:none;}
+
+  /* cursor glow (desktop only, subtle) */
+  #cursor-glow{position:fixed; width:340px; height:340px; border-radius:50%; pointer-events:none; z-index:1; background:radial-gradient(circle, rgba(76,110,245,0.10), transparent 70%); transform:translate(-50%,-50%); transition:opacity .3s; display:none;}
+  @media (min-width:1024px){ #cursor-glow{display:block;} }
+
+  #scrollTop{opacity:0; pointer-events:none; transition:opacity .3s ease, transform .3s ease;}
+  #scrollTop.show{opacity:1; pointer-events:auto;}
+
+  .counter{font-variant-numeric:tabular-nums;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+/* ===== Booking form (Book a Free Trial) ===== */
+.step-dot{
+  width:32px; height:32px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-family:inherit; font-size:11px; font-weight:700;
+  border:1px solid rgba(255,255,255,0.18); color:rgba(255,255,255,0.4);
+  transition:border-color .3s ease, color .3s ease, background .3s ease;
+}
+.step-dot.active{ border-color:#4C6EF5; color:#fff; background:rgba(76,110,245,0.15); }
+.step-dot.done{ border-color:#4C6EF5; background:#4C6EF5; color:#0A0A0A; }
+.step-label{ color:rgba(255,255,255,0.4); transition:color .3s ease; }
+.step-label.active{ color:#4C6EF5; }
+
+.booking-step{ animation: stepIn .4s ease; }
+@keyframes stepIn{ from{opacity:0; transform:translateX(12px);} to{opacity:1; transform:translateX(0);} }
+
+.field-error{
+  font-size:12px; color:#FF6B6B; margin-top:6px; min-height:0;
+  display:none;
+}
+.field-error.show{ display:block; }
+.field-group input.invalid, .field-group select.invalid{
+  border-color:#FF6B6B !important;
+}
+
+.chip-toggle{ cursor:pointer; }
+.chip-label{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 16px; border-radius:999px;
+  border:1px solid rgba(255,255,255,0.18);
+  font-size:13px; color:rgba(255,255,255,0.65);
+  transition:border-color .2s ease, background .2s ease, color .2s ease;
+  user-select:none;
+}
+.chip-label.chip-card{
+  width:100%; padding:14px 10px; border-radius:14px; font-weight:600;
+}
+input.peer:checked + .chip-label,
+.chip-label.chip-active{
+  border-color:#4C6EF5; background:rgba(76,110,245,0.18); color:#fff;
+}
+input.peer:focus-visible + .chip-label{
+  outline:2px solid #4C6EF5; outline-offset:2px;
+}
+
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
+/* On mobile a full-width sticky "Book Free Trial" bar sits at the bottom —
+   lift the floating WhatsApp button and scroll-to-top button above it so
+   they don't get overlapped/clipped. */
+@media (max-width: 1023px){
+  #floatingWhatsapp, #scrollTop{
+    bottom: 84px;
+  }
+}
+
+/* ===== Custom select (dark-themed, replaces native <select> rendering) ===== */
+.cs-wrap{ position:relative; }
+.cs-native{
+  /* Kept in the DOM (for form semantics + existing JS that reads .value /
+     listens for 'change'), but visually hidden — the button + listbox
+     below are what the user actually sees and interacts with. */
+  position:absolute; inset:0; width:100%; height:100%;
+  opacity:0; pointer-events:none;
+}
+.cs-trigger{
+  width:100%; text-align:left; cursor:pointer;
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  background:#1A1A1A; color:#fff;
+  border:1px solid rgba(255,255,255,0.15); border-radius:12px;
+  padding:12px 16px; font-family:inherit; font-size:15px;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.cs-trigger .cs-trigger-label.placeholder{ color:rgba(255,255,255,0.4); }
+.cs-trigger .cs-chevron{ flex-shrink:0; width:16px; height:16px; color:#4C6EF5; transition:transform .25s ease; }
+.cs-wrap.open .cs-trigger .cs-chevron{ transform:rotate(180deg); }
+.cs-trigger:hover{ border-color:rgba(76,110,245,0.5); }
+.cs-trigger:focus-visible, .cs-wrap.open .cs-trigger{
+  border-color:#4C6EF5; outline:none;
+  box-shadow:0 0 0 3px rgba(76,110,245,0.25);
+}
+.cs-wrap.invalid .cs-trigger{ border-color:#FF6B6B !important; }
+/* booking-form.js's showError()/clearError() toggle .invalid on the
+   (now hidden) native <select> itself — reflect that onto the visible
+   trigger via the adjacent-sibling combinator, no JS changes needed. */
+.cs-native.invalid + .cs-trigger{ border-color:#FF6B6B !important; }
+
+.cs-menu{
+  position:absolute; left:0; right:0; top:calc(100% + 6px);
+  background:#1A1A1A; border:1px solid rgba(255,255,255,0.12);
+  border-radius:12px; padding:6px; z-index:60;
+  max-height:264px; overflow-y:auto;
+  box-shadow:0 20px 50px rgba(0,0,0,0.55);
+  opacity:0; visibility:hidden; transform:translateY(-6px);
+  transition:opacity .18s ease, transform .18s ease, visibility .18s;
+}
+.cs-wrap.open .cs-menu{ opacity:1; visibility:visible; transform:translateY(0); }
+.cs-wrap.drop-up .cs-menu{ top:auto; bottom:calc(100% + 6px); transform:translateY(6px); }
+.cs-wrap.open.drop-up .cs-menu{ transform:translateY(0); }
+
+.cs-option{
+  padding:11px 12px; border-radius:8px; font-size:14px; color:rgba(255,255,255,0.85);
+  cursor:pointer; user-select:none;
+}
+.cs-option.cs-highlighted{ background:rgba(76,110,245,0.16); color:#fff; }
+.cs-option.cs-selected{ background:rgba(76,110,245,0.22); color:#4C6EF5; font-weight:600; }
+.cs-option.cs-disabled{ color:rgba(255,255,255,0.25); cursor:default; }
+
+.cs-menu::-webkit-scrollbar{ width:8px; }
+.cs-menu::-webkit-scrollbar-thumb{ background:rgba(255,255,255,0.15); border-radius:8px; }

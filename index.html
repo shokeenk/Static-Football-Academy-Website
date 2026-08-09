@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Static Football Academy — Premium Youth Football Training, West Delhi</title>
+<link rel="icon" type="image/jpeg" href="images/logo.jpg">
+<meta name="description" content="Static Football Academy trains U10, U14 and U18 players at Maharaja Surajmal Stadium, West Delhi through structured coaching, discipline and modern methods. Book a free trial with founder-coach Tajish Shokeen.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Static Football Academy — Build Champions. Shape Character.">
+<meta property="og:description" content="Premium youth football training in West Delhi for U10, U14 and U18 players. Book a free trial today.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Static Football Academy — West Delhi">
+<meta name="twitter:description" content="Structured youth football coaching for U10, U14 and U18 in West Delhi.">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "Static Football Academy",
+  "founder": { "@type": "Person", "name": "Tajish Shokeen" },
+  "telephone": "+91-9560631330",
+  "address": { "@type": "PostalAddress", "streetAddress": "Maharaja Surajmal Stadium", "addressLocality": "West Delhi", "addressRegion": "Delhi", "addressCountry": "IN" },
+  "areaServed": "West Delhi, Delhi",
+  "sport": "Football"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0A0A0A',
+          grass: '#4C6EF5',
+          grassDim: '#3652C4',
+          fog: '#BDBDBD',
+        },
+        fontFamily: { sans: ['Inter','sans-serif'] },
+        borderRadius: { xl2: '24px' },
+      }
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="antialiased">
+
+<div id="loader"><span class="mark">STATIC FOOTBALL ACADEMY — LOADING</span></div>
+<div id="progress"></div>
+<div id="cursor-glow"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="py-5">
+  <div class="max-w-[1280px] mx-auto px-6 flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-3">
+      <img src="images/logo.jpg" alt="Static Football Academy logo" class="w-10 h-10 rounded-full object-cover ring-1 ring-white/15">
+      <span class="font-extrabold tracking-tight text-lg hidden sm:block">STATIC <span class="text-grass">FOOTBALL ACADEMY</span></span>
+    </a>
+    <div class="hidden lg:flex items-center gap-9 text-sm text-fog">
+      <a href="#about" class="navlink hover:text-white">About</a>
+      <a href="#programs" class="navlink hover:text-white">Programs</a>
+      <a href="#coaches" class="navlink hover:text-white">Coaches</a>
+      <a href="#facilities" class="navlink hover:text-white">Facilities</a>
+      <a href="#locations" class="navlink hover:text-white">Locations</a>
+      <a href="#gallery" class="navlink hover:text-white">Gallery</a>
+      <a href="#testimonials" class="navlink hover:text-white">Testimonials</a>
+      <a href="#contact" class="navlink hover:text-white">Contact</a>
+    </div>
+    <a href="#contact" class="glow-btn pill bg-grass text-ink font-semibold text-sm px-6 py-3 hidden md:inline-block">Book Free Trial</a>
+    <button id="menuBtn" class="lg:hidden text-white"><i data-lucide="menu" class="w-7 h-7"></i></button>
+  </div>
+  <!-- mobile drawer -->
+  <div id="drawer" class="lg:hidden fixed inset-0 bg-ink/98 backdrop-blur-xl z-50 translate-x-full transition-transform duration-300 flex flex-col">
+    <div class="flex justify-between items-center px-6 py-5 border-b border-white/10">
+      <span class="font-extrabold">STATIC <span class="text-grass">FOOTBALL ACADEMY</span></span>
+      <button id="closeDrawer"><i data-lucide="x" class="w-7 h-7"></i></button>
+    </div>
+    <div class="flex flex-col gap-7 px-6 py-10 text-xl">
+      <a href="#about" class="drawer-link">About</a>
+      <a href="#programs" class="drawer-link">Programs</a>
+      <a href="#coaches" class="drawer-link">Coaches</a>
+      <a href="#facilities" class="drawer-link">Facilities</a>
+      <a href="#locations" class="drawer-link">Locations</a>
+      <a href="#gallery" class="drawer-link">Gallery</a>
+      <a href="#testimonials" class="drawer-link">Testimonials</a>
+      <a href="#contact" class="drawer-link">Contact</a>
+      <a href="#contact" class="pill bg-grass text-ink font-semibold text-center py-4 mt-4">Book Free Trial</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero-bg relative min-h-screen flex items-center pt-28 pb-16">
+  <div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center w-full relative z-10">
+
+    <!-- LEFT: hero image -->
+    <div class="relative h-[420px] lg:h-[560px] order-2 lg:order-1 reveal in">
+      <div class="float absolute inset-6 rounded-xl2 glass img-zoom">
+        <img class="real-photo" src="images/g1.jpg" alt="Static Football Academy player in match action" loading="lazy">
+      </div>
+      <div class="float-slow absolute -left-4 top-6 glass rounded-2xl px-5 py-4 w-36">
+        <div class="counter text-3xl font-black text-grass" data-count="150">0</div>
+        <div class="text-[11px] text-fog uppercase tracking-wide mt-1">Players Trained</div>
+      </div>
+      <div class="float absolute -right-4 bottom-10 glass rounded-2xl px-5 py-4 w-36">
+        <div class="counter text-3xl font-black text-grass" data-count="10">0</div>
+        <div class="text-[11px] text-fog uppercase tracking-wide mt-1">Competitive Events</div>
+      </div>
+    </div>
+
+    <!-- RIGHT: headline, copy, CTAs, stats -->
+    <div class="order-1 lg:order-2 reveal in">
+      <span class="inline-block glass pill px-4 py-1.5 text-xs tracking-[0.2em] text-grass font-semibold mb-7">EST. 2024</span>
+      <h1 class="text-5xl sm:text-6xl lg:text-[64px] font-black leading-[0.98] tracking-tight mb-7">
+        Build <span class="text-grass">The Player.</span><br>Build The Person.
+      </h1>
+      <p class="text-fog text-lg leading-relaxed max-w-lg mb-10">
+        Here, football is not merely played — it is cultivated, session by session, in the heart
+      </p>
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href="#contact" class="glow-btn pill bg-grass text-ink font-semibold px-8 py-4">Book A Free Trial</a>
+        <a href="#programs" class="pill border border-white/25 font-semibold px-8 py-4 hover:border-grass hover:text-grass transition">Explore Programs</a>
+      </div>
+      <div class="flex flex-wrap gap-4">
+        <div class="glass rounded-2xl px-5 py-4">
+          <div class="text-lg font-black text-grass tracking-wide">U10 · U14 · U18</div>
+          <div class="text-[11px] text-fog uppercase tracking-wide mt-1">Age Programs</div>
+        </div>
+        <div class="glass rounded-2xl px-5 py-4">
+          <div class="text-lg font-black text-grass tracking-wide">2</div>
+          <div class="text-[11px] text-fog uppercase tracking-wide mt-1">Training Locations</div>
+        </div>
+        <div class="glass rounded-2xl px-5 py-4">
+          <div class="text-lg font-black text-grass tracking-wide">West Delhi</div>
+          <div class="text-[11px] text-fog uppercase tracking-wide mt-1">Delhi</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-fog animate-bounce">
+    <i data-lucide="chevron-down" class="w-6 h-6"></i>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-28 lg:py-36">
+  <div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="reveal img-zoom rounded-xl2 h-[420px] lg:h-[520px] order-2 lg:order-1">
+      <img class="real-photo" src="images/g9.jpg" alt="Static Football Academy team group photo" loading="lazy">
+    </div>
+    <div class="reveal order-1 lg:order-2">
+      <span class="text-grass text-xs font-bold tracking-[0.2em] uppercase">About Us</span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-4 mb-6 leading-tight">About Static Football Academy</h2>
+      <p class="text-fog text-lg leading-relaxed mb-8">
+        Founded in 2024 at Surajmal Football Ground, Static Football Academy started with a simple belief: consistency builds great players.<br>
+
+Through daily hard work and the dedication of founder and coach Tajish Shokeen, Static has grown with a focus on developing technically strong, disciplined, and confident footballers through structured coaching, teamwork, fitness, and real match experience.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-5 mb-8">
+        <div class="glass rounded-2xl p-5">
+          <div class="text-grass font-bold mb-1 text-sm uppercase tracking-wide">Mission</div>
+          <p class="text-fog text-sm leading-relaxed">Develop footballers with discipline, confidence and technical excellence.</p>
+        </div>
+        <div class="glass rounded-2xl p-5">
+          <div class="text-grass font-bold mb-1 text-sm uppercase tracking-wide">Vision</div>
+          <p class="text-fog text-sm leading-relaxed">Become one of Delhi's leading youth football academies.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="flex items-center gap-3 text-sm"><i data-lucide="shield-check" class="w-5 h-5 text-grass"></i>Professional Coaching</div>
+        <div class="flex items-center gap-3 text-sm"><i data-lucide="zap" class="w-5 h-5 text-grass"></i>Modern Training</div>
+        <div class="flex items-center gap-3 text-sm"><i data-lucide="users" class="w-5 h-5 text-grass"></i>Character Development</div>
+        <div class="flex items-center gap-3 text-sm"><i data-lucide="trophy" class="w-5 h-5 text-grass"></i>Match Exposure</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="py-28 bg-white/[0.02]">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+      <span class="text-grass text-xs font-bold tracking-[0.2em] uppercase">Why Choose Us</span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-4">Why Static Football Academy</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-x-16 gap-y-12 stagger" id="whyGrid">
+      <!-- items injected via loop below -->
+    </div>
+  </div>
+</section>
+
+<!-- TRAINING METHODOLOGY -->
+<section id="methodology" class="py-28 lg:py-36">
+  <div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="reveal img-zoom rounded-xl2 h-[420px] lg:h-[520px]">
+      <img class="real-photo" src=" images/g18.jpeg" alt="Static Football Academy players training" loading="lazy">
+    </div>
+    <div class="reveal">
+      <span class="text-grass text-xs font-bold tracking-[0.2em] uppercase">How We Train</span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-4 mb-6 leading-tight">Train With Purpose</h2>
+      <p class="text-fog text-lg leading-relaxed mb-8">
+        Every session combines technical development, movement, decision-making and teamwork — coached in structured, focused drills rather than unstructured play.
+      </p>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="flex items-center gap-3 text-sm"><i data-lucide="crosshair" class="w-5 h-5 text-grass"></i>Technical Drills</div>
+        <div class="flex items-center gap-3 text-sm"><i data-lucide="users-round" class="w-5 h-5 text-grass"></i>Teamwork Focus</div>
+        <div class="flex items-center gap-3 text-sm"><i data-lucide="brain" class="w-5 h-5 text-grass"></i>Decision Making</div>
+        <div class="flex items-center gap-3 text-sm"><i data-lucide="target" class="w-5 h-5 text-grass"></i>Ball Mastery</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs" class="py-28 lg:py-36">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+      <span class="text-grass text-xs font-bold tracking-[0.2em] uppercase">Training Programs</span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-4">Programs by Age Group</h2>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-8">
+      <div class="reveal lift glass rounded-xl2 overflow-hidden">
+        <div class="h-52 img-zoom"><img class="real-photo" src="images/general-training.jpg" alt="Static Football Academy U10 football training" loading="lazy" style="object-position: 50% 20%;"></div>
+        <div class="p-8">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-2xl font-bold">U10 Development</h3>
+            <span class="text-grass font-black text-xl">10</span>
+          </div>
+          <p class="text-fog text-sm leading-relaxed mb-2">Building strong football foundations.</p>
+          <p class="text-fog text-sm leading-relaxed mb-5">Fun-based fundamentals focused on ball control, dribbling, coordination, passing and confidence.</p>
+          <div class="text-xs text-fog uppercase tracking-wide mb-6">3 Sessions / Week</div>
+          <a href="#contact" onclick="window.presetProgram && window.presetProgram('U10')" class="pill bg-grass/10 border border-grass text-grass font-semibold text-sm px-6 py-3 inline-block hover:bg-grass hover:text-ink transition">Explore U10</a>
+        </div>
+      </div>
+      <div class="reveal lift glass rounded-xl2 overflow-hidden" style="--i:1">
+        <div class="h-52 img-zoom"><img class="real-photo" src="images/u14-training.jpg" alt="Static Football Academy U14 football training" loading="lazy"></div>
+        <div class="p-8">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-2xl font-bold">U14 Development</h3>
+            <span class="text-grass font-black text-xl">14</span>
+          </div>
+          <p class="text-fog text-sm leading-relaxed mb-2">Developing technique, awareness and confidence.</p>
+          <p class="text-fog text-sm leading-relaxed mb-5">Technical development, passing, first touch, tactical awareness and decision making. Weekly matches for better exposure.  </p>
+          <div class="text-xs text-fog uppercase tracking-wide mb-6">3 Sessions / Week</div>
+          <a href="#contact" onclick="window.presetProgram && window.presetProgram('U14')" class="pill bg-grass/10 border border-grass text-grass font-semibold text-sm px-6 py-3 inline-block hover:bg-grass hover:text-ink transition">Explore U14</a>
+        </div>
+      </div>
+      <div class="reveal lift glass rounded-xl2 overflow-hidden" style="--i:2">
+        <div class="h-52 img-zoom"><img class="real-photo" src="images/u18-training.jpg" alt="Static Football Academy U18 football training" loading="lazy"></div>
+        <div class="p-8">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-2xl font-bold">U18 Elite</h3>
+            <span class="text-grass font-black text-xl">18</span>
+          </div>
+          <p class="text-fog text-sm leading-relaxed mb-2">Preparing players for competitive football.</p>
+          <p class="text-fog text-sm leading-relaxed mb-5">Advanced technical training, tactical understanding, match preparation and fitness. Weekly matches for better exposure.</p>
+          <div class="text-xs text-fog uppercase tracking-wide mb-6">3 Sessions / Week</div>
+          <a href="#contact" onclick="window.presetProgram && window.presetProgram('U18')" class="pill bg-grass/10 border border-grass text-grass font-semibold text-sm px-6 py-3 inline-block hover:bg-grass hover:text-ink transition">Explore U18</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY TIMELINE -->
+<section class="py-28 bg-white/[0.02]">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+      <span class="text-grass text-xs font-bold tracking-[0.2em] uppercase">Our Process</span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-4">Training Philosophy</h2>
+    </div>
+    <div class="grid md:grid-cols-6 gap-6 reveal">
+      <div class="text-center"><div class="w-12 h-12 rounded-full bg-grass text-ink font-black flex items-center justify-center mx-auto mb-4">1</div><div class="text-sm font-semibold">Player Assessment</div></div>
+      <div class="text-center"><div class="w-12 h-12 rounded-full bg-grass text-ink font-black flex items-center justify-center mx-auto mb-4">2</div><div class="text-sm font-semibold">Technical Skills</div></div>
+      <div class="text-center"><div class="w-12 h-12 rounded-full bg-grass text-ink font-black flex items-center justify-center mx-auto mb-4">3</div><div class="text-sm font-semibold">Fitness Development</div></div>
+      <div class="text-center"><div class="w-12 h-12 rounded-full bg-grass text-ink font-black flex items-center justify-center mx-auto mb-4">4</div><div class="text-sm font-semibold">Game Intelligence</div></div>
+      <div class="text-center"><div class="w-12 h-12 rounded-full bg-grass text-ink font-black flex items-center justify-center mx-auto mb-4">5</div><div class="text-sm font-semibold">Match Practice</div></div>
+      <div class="text-center"><div class="w-12 h-12 rounded-full bg-grass text-ink font-black flex items-center justify-center mx-auto mb-4">6</div><div class="text-sm font-semibold">Tournament Experience</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES -->
+<section id="facilities" class="py-28 bg-white/[0.02]">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+      <span class="text-grass text-xs font-bold tracking-[0.2em] uppercase">Where We Train</span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-4">Facilities &amp; Equipment</h2>
+    </div>
+
+    <!-- Equipment feature -->
+    <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+      <div class="reveal img-zoom rounded-xl2 h-[320px] lg:h-[420px] order-2 lg:order-1">
+        <img class="real-photo" src="images/training-equipment.jpg" alt="Static Football Academy football training equipment" loading="lazy">
+      </div>
+      <div class="reveal order-1 lg:order-2">
+        <span class="text-grass text-xs font-bold tracking-[0.2em] uppercase">Training Equipment</span>
+        <h3 class="text-3xl lg:text-4xl font-black mt-4 mb-6 leading-tight">Professional Equipment, Purposeful Sessions</h3>
+        <p class="text-fog leading-relaxed mb-8">Every training session is set up with the right equipment so time on the pitch is used purposefully.</p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="flex items-center gap-3 text-sm"><i data-lucide="traffic-cone" class="w-5 h-5 text-grass"></i>Training Cones</div>
+          <div class="flex items-center gap-3 text-sm"><i data-lucide="move" class="w-5 h-5 text-grass"></i>Agility Equipment</div>
+          <div class="flex items-center gap-3 text-sm"><i data-lucide="circle" class="w-5 h-5 text-grass"></i>Goal Posts (6 x 7 ft)</div>
+          <div class="flex items-center gap-3 text-sm"><i data-lucide="zap" class="w-5 h-5 text-grass"></i>Speed &amp; Coordination Kit</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger">
+      <div class="reveal img-zoom rounded-xl2 h-56"><img class="real-photo" src="images/g21.jpeg" alt="Static Football Academy training ground" loading="lazy"></div>
+      <div class="reveal img-zoom rounded-xl2 h-56" style="--i:1"><div class="real-photo"><img class="real-photo" src="images/g16.jpeg" alt="Static Football Academy practice session" loading="lazy"></div></div>
+      <div class="reveal img-zoom rounded-xl2 h-56" style="--i:2"><div class="real-photo"><img class="real-photo" src="images/g17.jpeg" alt="Static Football Academy practice session" loading="lazy"></div></div>
+      <div class="reveal img-zoom rounded-xl2 h-56" style="--i:3"><img class="real-photo" src="images/g3.jpg" alt="Static Football Academy practice session" loading="lazy"></div>
+      <div class="reveal img-zoom rounded-xl2 h-56" style="--i:4"><img class="real-photo" src="images/g5.jpg" alt="Static Football Academy match day" loading="lazy"></div>
+      <div class="reveal img-zoom rounded-xl2 h-56" style="--i:5"><div class="real-photo"><img class="real-photo" src="images/g20.jpeg" alt="Static Football Academy practice session" loading="lazy"></div></div>
+    </div>
+  </div>
+</section
+
+<!-- RECOVERY -->
+<section id="recovery" class="py-28 lg:py-36">
+  <div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="reveal img-zoom rounded-xl2 h-[420px] lg:h-[520px]">
+      <img class="real-photo" src="images/recovery-training.jpg" alt="Static Football Academy players recovering after training" loading="lazy">
+    </div>
+    <div class="reveal">
+      <span class="text-grass text-xs font-bold tracking-[0.2em] uppercase">Player Wellbeing</span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-4 mb-6 leading-tight">Recover. Reset. Return Stronger.</h2>
+      <p class="text-fog text-lg leading-relaxed mb-4">
+        Recovery is an important part of developing young footballers. We encourage players to cool down, recover and prepare properly for their next session.
+      </p>
+      <p class="text-fog text-sm leading-relaxed">
+        This is part of our overall approach to player development — not a medical or physiotherapy service.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- COACHES -->
+<section id="coaches" class="py-28 lg:py-36">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+      <span class="text-grass text-xs font-bold tracking-[0.2em] uppercase">Meet The Team</span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-4">Coaches</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      <div class="reveal lift glass rounded-xl2 overflow-hidden group">
+        <div class="h-72 img-zoom relative">
+          <img class="real-photo" src="images/coach.jpg" alt="Tajish Shokeen, Founder and Head Coach of Static Football Academy" loading="lazy" style="object-position: 50% 15%;">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-70 pointer-events-none"></div>
+          <div class="absolute inset-0 ring-0 group-hover:ring-2 ring-grass/60 transition-all duration-300 pointer-events-none"></div>
+        </div>
+        <div class="p-8 text-center">
+          <div class="text-grass text-xs font-bold uppercase tracking-[0.2em] mb-2">Coach</div>
+          <h3 class="text-2xl font-bold">Tajish Shokeen</h3>
+          <div class="text-grass text-sm font-semibold uppercase tracking-wide mt-1 mb-4">Founder &amp; Head Coach</div>
+          <p class="text-fog text-sm leading-relaxed">AIFF Licensed Coach, Strength and Conditioning Specialist with 2+ years of experience in football coaching and academy management, dedicated to developing disciplined, confident players through structured training and a passion for the game.</p>
+        </div>
+      </div>
+      <div class="reveal lift glass rounded-xl2 p-8 text-center flex flex-col items-center justify-center border-dashed" style="--i:1">
+        <div class="w-28 h-28 rounded-full mx-auto mb-6 border-2 border-dashed border-white/25 flex items-center justify-center text-fog"><i data-lucide="user-plus" class="w-8 h-8"></i></div>
+        <h3 class="text-xl font-bold text-fog">Coach Spot Open</h3>
+        <div class="text-fog text-sm mt-1">Future coaching staff</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section id="locations" class="py-28 lg:py-36">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+      <span class="text-grass text-xs font-bold tracking-[0.2em] uppercase">Find Us</span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-4">Our Training Locations</h2>
+      <p class="text-fog mt-5">Train, develop and grow with Static Football Academy across West Delhi.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="reveal lift glass rounded-xl2 overflow-hidden">
+        <div class="h-56 img-zoom"><img class="real-photo" src="images/g11.jpg" alt="Static Football Academy players at Maharaja Surajmal Stadium" loading="lazy"></div>
+        <div class="p-8">
+          <div class="text-grass text-xs font-bold uppercase tracking-[0.2em] mb-2">Location 01</div>
+          <h3 class="text-2xl font-bold mb-2">Static Football Academy</h3>
+          <div class="flex items-center gap-2 text-fog text-sm mb-4"><i data-lucide="map-pin" class="w-4 h-4 text-grass"></i>Maharaja Surajmal Stadium, West Delhi, Delhi</div>
+          <p class="text-fog text-sm leading-relaxed mb-6">Our primary training ground, running structured sessions for U10, U14 and U18 players.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://www.google.com/maps/place/Static+Football+Academy/@28.6831949,77.0729386,17z/data=!3m1!4b1!4m6!3m5!1s0x390d0584374c9161:0x1d14b1853e6086d!8m2!3d28.6831902!4d77.0755135!16s%2Fg%2F11vx3xcpyk?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D" class="pill border border-white/25 font-semibold text-sm px-5 py-3 inline-flex items-center gap-2 hover:border-grass hover:text-grass transition"><i data-lucide="map" class="w-4 h-4"></i>View on Google Maps</a>
+            <a href="#contact" onclick="window.presetLocation && window.presetLocation(0)" class="pill bg-grass text-ink font-semibold text-sm px-5 py-3 inline-block glow-btn">Book Free Trial</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal lift glass rounded-xl2 overflow-hidden" style="--i:1">
+        <div class="h-56 img-zoom">
+  <img class="real-photo" src="images/g19.jpeg" alt="Static Football Academy players at Maharaja Surajmal Stadium" loading="lazy">
+</div>
+        <div class="p-8">
+          <div class="text-grass text-xs font-bold uppercase tracking-[0.2em] mb-2">Location 02</div>
+          <h3 class="text-2xl font-bold mb-2">DAV Centenary Public School</h3>
+          <div class="flex items-center gap-2 text-fog text-sm mb-4"><i data-lucide="map-pin" class="w-4 h-4 text-grass"></i>Mianwali Nagar, Delhi</div>
+          <p class="text-fog text-sm leading-relaxed mb-6">Our second training location, bringing the same structured coaching to players in Mianwali Nagar.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://www.google.com/maps/place/Static+Football+Academy+x+SPORTS+Gurukul/@28.6770563,77.0878889,17z/data=!4m6!3m5!1s0x390d050037464b13:0xde5c9f632aaf3000!8m2!3d28.6770849!4d77.0898991!16s%2Fg%2F11zh64s86b?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D" class="pill border border-white/25 font-semibold text-sm px-5 py-3 inline-flex items-center gap-2 hover:border-grass hover:text-grass transition"><i data-lucide="map" class="w-4 h-4"></i>View on Google Maps</a>
+            <a href="#contact" onclick="window.presetLocation && window.presetLocation(1)" class="pill bg-grass text-ink font-semibold text-sm px-5 py-3 inline-block glow-btn">Book Free Trial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="py-28 lg:py-36">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+      <span class="text-grass text-xs font-bold tracking-[0.2em] uppercase">Moments</span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-4">Photo Gallery</h2>
+    </div>
+    <div class="columns-2 md:columns-3 gap-5 space-y-5" id="galleryGrid">
+      <div class="break-inside-avoid img-zoom rounded-xl2 h-64 gallery-item" data-label="Training"><img class="real-photo" src="images/g22.jpeg" alt="Static Football Academy training huddle" loading="lazy"></div>
+      <div class="break-inside-avoid img-zoom rounded-xl2 h-44 gallery-item" data-label="Matches"><img class="real-photo" src="images/g4.jpg" alt="Static Football Academy match action" loading="lazy"></div>
+      <div class="break-inside-avoid img-zoom rounded-xl2 h-56 gallery-item" data-label="Team Photos"><img class="real-photo" src="images/g6.jpg" alt="Static Football Academy team photo" loading="lazy"></div>
+      <div class="break-inside-avoid img-zoom rounded-xl2 h-64 gallery-item" data-label="Celebrations"><img class="real-photo" src="images/g10.jpg" alt="Static Football Academy players celebrating" loading="lazy"></div>
+      <div class="break-inside-avoid img-zoom rounded-xl2 h-60 gallery-item" data-label="Practice"><img class="real-photo" src="images/g12.jpg" alt="Static Football Academy practice drill" loading="lazy"></div>
+      <div class="break-inside-avoid img-zoom rounded-xl2 h-60 gallery-item" data-label="Football Ground"><img class="real-photo" src="images/g7.jpg" alt="Static Football Academy players celebrating on the ground" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="fixed inset-0 bg-black/90 z-[200] hidden items-center justify-center p-6">
+  <button id="closeLightbox" class="absolute top-6 right-6 text-white z-10"><i data-lucide="x" class="w-8 h-8"></i></button>
+  <div id="lightboxCard" class="glass rounded-xl2 w-full max-w-3xl overflow-hidden">
+    <div class="max-h-[70vh] flex items-center justify-center bg-black/40">
+      <img id="lightboxImg" class="w-full max-h-[70vh] object-contain" src="" alt="">
+    </div>
+    <div class="px-6 py-4 border-t border-white/10">
+      <span id="lightboxLabel" class="text-fog text-sm uppercase tracking-widest"></span>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="py-28 bg-white/[0.02] overflow-hidden">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+      <span class="text-grass text-xs font-bold tracking-[0.2em] uppercase">Testimonials</span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-4">What Parents &amp; Players Say</h2>
+    </div>
+    <div class="max-w-2xl mx-auto relative reveal">
+      <div class="overflow-hidden">
+        <div class="t-track" id="tTrack">
+          <div class="t-slide px-3">
+            <div class="glass rounded-xl2 p-10 text-center">
+              <div class="flex justify-center gap-1 text-grass mb-5">★★★★★</div>
+              <p class="text-lg leading-relaxed mb-6">"My son has grown so much in confidence since joining. The coaching is structured and disciplined — exactly what we wanted."</p>
+              <div class="font-semibold">Parent, U10 Program</div>
+            </div>
+          </div>
+          <div class="t-slide px-3">
+            <div class="glass rounded-xl2 p-10 text-center">
+              <div class="flex justify-center gap-1 text-grass mb-5">★★★★★</div>
+              <p class="text-lg leading-relaxed mb-6">"Coach Tajish pushes us hard but it's paying off. My footwork and match awareness have improved a lot this season."</p>
+              <div class="font-semibold">Player, U14 Program</div>
+            </div>
+          </div>
+          <div class="t-slide px-3">
+            <div class="glass rounded-xl2 p-10 text-center">
+              <div class="flex justify-center gap-1 text-grass mb-5">★★★★★</div>
+              <p class="text-lg leading-relaxed mb-6">"A genuinely professional setup for a West Delhi academy. Great communication with parents throughout."</p>
+              <div class="font-semibold">Parent, U18 Program</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center gap-2 mt-8" id="tDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-28 lg:py-36">
+  <div class="max-w-[820px] mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <span class="text-grass text-xs font-bold tracking-[0.2em] uppercase">FAQ</span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-4">Frequently Asked Questions</h2>
+    </div>
+    <div class="space-y-4 reveal">
+      <details class="faq-item glass rounded-2xl px-6 py-5" open>
+        <summary class="flex items-center justify-between font-semibold text-lg">What age groups do you train?<span class="chev text-grass transition-transform"><i data-lucide="plus" class="w-5 h-5"></i></span></summary>
+        <p class="text-fog text-sm mt-4 leading-relaxed">We train three age groups: U10, U14 and U18 — each with its own curriculum and weekly schedule.</p>
+      </details>
+      <details class="faq-item glass rounded-2xl px-6 py-5">
+        <summary class="flex items-center justify-between font-semibold text-lg">Where is the academy located?<span class="chev text-grass transition-transform"><i data-lucide="plus" class="w-5 h-5"></i></span></summary>
+        <p class="text-fog text-sm mt-4 leading-relaxed">We train at Maharaja Surajmal Stadium, West Delhi. Exact ground address is shared once you book a trial.</p>
+      </details>
+      <details class="faq-item glass rounded-2xl px-6 py-5">
+        <summary class="flex items-center justify-between font-semibold text-lg">How do I register?<span class="chev text-grass transition-transform"><i data-lucide="plus" class="w-5 h-5"></i></span></summary>
+        <p class="text-fog text-sm mt-4 leading-relaxed">Fill out the contact form below or WhatsApp us directly — we'll confirm a free trial slot for your player's age group.</p>
+      </details>
+      <details class="faq-item glass rounded-2xl px-6 py-5">
+        <summary class="flex items-center justify-between font-semibold text-lg">Can beginners join?<span class="chev text-grass transition-transform"><i data-lucide="plus" class="w-5 h-5"></i></span></summary>
+        <p class="text-fog text-sm mt-4 leading-relaxed">Yes — the U10 program is built for players just starting out, focused on fundamentals and enjoying the game.</p>
+      </details>
+      <details class="faq-item glass rounded-2xl px-6 py-5">
+        <summary class="flex items-center justify-between font-semibold text-lg">Do you offer trial sessions?<span class="chev text-grass transition-transform"><i data-lucide="plus" class="w-5 h-5"></i></span></summary>
+        <p class="text-fog text-sm mt-4 leading-relaxed">Yes, every new player gets a free trial session before enrolling.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="relative py-28 lg:py-36 overflow-hidden">
+  <div class="absolute inset-0 hero-bg"></div>
+  <div class="relative max-w-3xl mx-auto px-6 text-center reveal">
+    <h2 class="text-4xl lg:text-6xl font-black mb-6 leading-tight">Start Your Football Journey Today</h2>
+    <p class="text-fog text-lg mb-10">Become part of Static Football Academy and train with passion, discipline and purpose.</p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="#contact" class="glow-btn pill bg-grass text-ink font-semibold px-8 py-4">Book Free Trial</a>
+      <a href="tel:+919560631330" class="pill border border-white/25 font-semibold px-8 py-4 hover:border-grass hover:text-grass transition">Call Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-28 bg-white/[0.02]">
+  <div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-16">
+    <div class="reveal">
+      <span class="text-grass text-xs font-bold tracking-[0.2em] uppercase">Get In Touch</span>
+      <h2 class="text-4xl lg:text-5xl font-black mt-4 mb-8">Contact Us</h2>
+      <div class="space-y-5 mb-8">
+        <div class="flex items-start gap-4"><i data-lucide="map-pin" class="w-5 h-5 text-grass mt-1"></i><div><div class="font-semibold">Locations</div><div class="text-fog text-sm">Maharaja Surajmal Stadium, West Delhi, Delhi</div><div class="text-fog text-sm">DAV Centenary Public School, Mianwali Nagar, Delhi</div></div></div>
+        <div class="flex items-start gap-4"><i data-lucide="user" class="w-5 h-5 text-grass mt-1"></i><div><div class="font-semibold">Founder</div><div class="text-fog text-sm">Tajish Shokeen</div></div></div>
+        <div class="flex items-start gap-4"><i data-lucide="phone" class="w-5 h-5 text-grass mt-1"></i><div><div class="font-semibold">Phone</div><div class="text-fog text-sm">+91 95606 31330</div></div></div>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="https://wa.me/919560631330" class="glow-btn pill bg-grass text-ink font-semibold px-7 py-3.5 inline-flex items-center gap-2"><i data-lucide="message-circle" class="w-5 h-5"></i>Chat on WhatsApp</a>
+        <a href="https://www.instagram.com/sta.ticfootball" target="_blank" rel="noopener" class="pill border border-white/25 font-semibold px-7 py-3.5 inline-flex items-center gap-2 hover:border-grass hover:text-grass transition">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          Follow on Instagram
+        </a>
+      </div>
+      <div class="mt-8 rounded-xl2 overflow-hidden border border-white/10 h-56">
+        <iframe
+          src="https://www.google.com/maps?q=Maharaja+Surajmal+Stadium,+West+Delhi,+Delhi&output=embed"
+          width="100%" height="100%" style="border:0; filter: grayscale(1) invert(0.92) contrast(0.9);"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Static Football Academy — Maharaja Surajmal Stadium location">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="reveal glass rounded-xl2 p-8" style="--i:1">
+
+      <!-- FORM HEADER -->
+      <div id="formHeader">
+        <span class="text-grass text-xs font-bold tracking-[0.2em] uppercase">Enroll Today</span>
+        <h3 class="text-3xl font-black mt-3 mb-2">Book a Free Trial</h3>
+        <p class="text-fog text-sm mb-8">Tell us a little about the player and we'll help you find the right training program.</p>
+
+        <!-- STEP INDICATOR -->
+        <div class="flex items-center gap-3 mb-8" id="stepIndicator">
+          <div class="flex items-center gap-2">
+            <div class="step-dot active" id="dot1">01</div>
+            <span class="text-xs uppercase tracking-wide font-semibold step-label active" id="label1">Player Details</span>
+          </div>
+          <div class="flex-1 h-px bg-white/15"></div>
+          <div class="flex items-center gap-2">
+            <div class="step-dot" id="dot2">02</div>
+            <span class="text-xs uppercase tracking-wide font-semibold step-label" id="label2">Training Preferences</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 1: PLAYER DETAILS -->
+      <div id="step1" class="booking-step space-y-5">
+        <div class="field-group">
+          <label for="parentName" class="text-xs uppercase tracking-wide text-fog block mb-2">Parent / Guardian Name <span class="text-grass">*</span></label>
+          <input type="text" id="parentName" name="parentName" placeholder="Enter parent / guardian name" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 focus:border-grass outline-none transition">
+          <p class="field-error" id="err-parentName"></p>
+        </div>
+
+        <div class="field-group">
+          <label for="phone" class="text-xs uppercase tracking-wide text-fog block mb-2">WhatsApp / Phone Number <span class="text-grass">*</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 focus:border-grass outline-none transition">
+          <p class="field-error" id="err-phone"></p>
+        </div>
+
+        <div class="field-group">
+          <label for="playerName" class="text-xs uppercase tracking-wide text-fog block mb-2">Player Name <span class="text-grass">*</span></label>
+          <input type="text" id="playerName" name="playerName" placeholder="Enter player's name" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 focus:border-grass outline-none transition">
+          <p class="field-error" id="err-playerName"></p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div class="field-group">
+            <label for="age" class="text-xs uppercase tracking-wide text-fog block mb-2">Player Age <span class="text-grass">*</span></label>
+            <select id="age" name="age" class="js-custom-select w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 focus:border-grass outline-none transition">
+              <option value="">Select age</option>
+              <option value="under8">Under 8</option>
+              <option value="8-9">8–9</option>
+              <option value="10-11">10–11</option>
+              <option value="12-13">12–13</option>
+              <option value="14-15">14–15</option>
+              <option value="16-17">16–17</option>
+              <option value="18plus">18+</option>
+            </select>
+            <p class="field-error" id="err-age"></p>
+          </div>
+
+          <div class="field-group">
+            <label for="experience" class="text-xs uppercase tracking-wide text-fog block mb-2">Football Experience <span class="text-grass">*</span></label>
+            <select id="experience" name="experience" class="js-custom-select w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 focus:border-grass outline-none transition">
+              <option value="">Select experience</option>
+              <option value="beginner">Beginner — Just starting</option>
+              <option value="some">Some Experience — Plays occasionally</option>
+              <option value="intermediate">Intermediate — Regular training</option>
+              <option value="advanced">Advanced — Plays competitively</option>
+            </select>
+            <p class="field-error" id="err-experience"></p>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="text-xs uppercase tracking-wide text-fog block mb-3">Has the player trained at a football academy before?</label>
+          <div class="flex gap-3">
+            <label class="chip-toggle">
+              <input type="radio" name="previousAcademy" value="yes" id="prevYes" class="sr-only peer">
+              <span class="chip-label">Yes</span>
+            </label>
+            <label class="chip-toggle">
+              <input type="radio" name="previousAcademy" value="no" id="prevNo" class="sr-only peer">
+              <span class="chip-label">No</span>
+            </label>
+          </div>
+          <div id="prevAcademyDetailsWrap" class="mt-4 hidden">
+            <label for="previousAcademyDetails" class="text-xs uppercase tracking-wide text-fog block mb-2">Which academy / for how long? <span class="text-fog normal-case tracking-normal">(optional)</span></label>
+            <input type="text" id="previousAcademyDetails" name="previousAcademyDetails" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 focus:border-grass outline-none transition">
+          </div>
+        </div>
+
+        <button type="button" id="nextBtn" class="glow-btn pill bg-grass text-ink font-semibold px-8 py-4 w-full sm:w-auto">NEXT →</button>
+      </div>
+
+      <!-- STEP 2: TRAINING PREFERENCES -->
+      <div id="step2" class="booking-step space-y-6 hidden">
+        <h4 class="text-lg font-bold tracking-wide">CHOOSE YOUR TRAINING PREFERENCES</h4>
+
+        <div class="field-group">
+          <label for="program" class="text-xs uppercase tracking-wide text-fog block mb-2">Program / Age Group <span class="text-grass">*</span></label>
+          <select id="program" name="program" class="js-custom-select w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 focus:border-grass outline-none transition">
+            <option value="">Select program</option>
+            <option value="U10">U10 Development</option>
+            <option value="U14">U14 Development</option>
+            <option value="U18">U18 Elite</option>
+          </select>
+          <p class="text-[11px] text-fog mt-2" id="programHint"></p>
+          <p class="field-error" id="err-program"></p>
+        </div>
+
+        <div class="field-group">
+          <label for="location" class="text-xs uppercase tracking-wide text-fog block mb-2">Preferred Training Location <span class="text-grass">*</span></label>
+          <select id="location" name="location" class="js-custom-select w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 focus:border-grass outline-none transition">
+            <option value="">Select location</option>
+            <option value="surajmal">Static Football Academy — Maharaja Surajmal Stadium, West Delhi</option>
+            <option value="dav">DAV Centenary Public School — Mianwali Nagar, Delhi</option>
+          </select>
+          <p class="field-error" id="err-location"></p>
+        </div>
+
+        <div class="field-group">
+          <label class="text-xs uppercase tracking-wide text-fog block mb-3">Preferred Training Days <span class="text-grass">*</span></label>
+          <div class="flex flex-wrap gap-2" id="daysWrap">
+            <label class="chip-toggle"><input type="checkbox" name="trainingDays" value="Monday" class="sr-only peer"><span class="chip-label">Monday</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="trainingDays" value="Tuesday" class="sr-only peer"><span class="chip-label">Tuesday</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="trainingDays" value="Wednesday" class="sr-only peer"><span class="chip-label">Wednesday</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="trainingDays" value="Thursday" class="sr-only peer"><span class="chip-label">Thursday</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="trainingDays" value="Friday" class="sr-only peer"><span class="chip-label">Friday</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="trainingDays" value="Saturday" class="sr-only peer"><span class="chip-label">Saturday</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="trainingDays" value="Sunday" class="sr-only peer"><span class="chip-label">Sunday</span></label>
+          </div>
+          <p class="field-error" id="err-trainingDays"></p>
+        </div>
+
+        <div class="field-group">
+          <label class="text-xs uppercase tracking-wide text-fog block mb-3">Preferred Training Time <span class="text-grass">*</span></label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="timeWrap">
+            <label class="chip-toggle"><input type="radio" name="trainingTime" value="Morning" class="sr-only peer"><span class="chip-label chip-card">Morning</span></label>
+            <label class="chip-toggle"><input type="radio" name="trainingTime" value="Afternoon" class="sr-only peer"><span class="chip-label chip-card">Afternoon</span></label>
+            <label class="chip-toggle"><input type="radio" name="trainingTime" value="Evening" class="sr-only peer"><span class="chip-label chip-card">Evening</span></label>
+            <label class="chip-toggle"><input type="radio" name="trainingTime" value="Flexible" class="sr-only peer"><span class="chip-label chip-card">Flexible</span></label>
+          </div>
+          <p class="field-error" id="err-trainingTime"></p>
+        </div>
+
+        <div class="field-group">
+          <label class="text-xs uppercase tracking-wide text-fog block mb-3">What would you like the player to achieve? <span class="text-fog normal-case tracking-normal">(optional)</span></label>
+          <div class="flex flex-wrap gap-2" id="goalsWrap">
+            <label class="chip-toggle"><input type="checkbox" name="goals" value="Skill Development" class="sr-only peer"><span class="chip-label">Skill Development</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="goals" value="Improve Fitness" class="sr-only peer"><span class="chip-label">Improve Fitness</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="goals" value="Competitive Football" class="sr-only peer"><span class="chip-label">Competitive Football</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="goals" value="Tournament Preparation" class="sr-only peer"><span class="chip-label">Tournament Preparation</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="goals" value="Technical Development" class="sr-only peer"><span class="chip-label">Technical Development</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="goals" value="Tactical Understanding" class="sr-only peer"><span class="chip-label">Tactical Understanding</span></label>
+            <label class="chip-toggle"><input type="checkbox" name="goals" value="Long-Term Football Development" class="sr-only peer"><span class="chip-label">Long-Term Football Development</span></label>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="source" class="text-xs uppercase tracking-wide text-fog block mb-2">How did you hear about Static Football Academy? <span class="text-fog normal-case tracking-normal">(optional)</span></label>
+          <select id="source" name="source" class="js-custom-select w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 focus:border-grass outline-none transition">
+            <option value="">Select an option</option>
+            <option>Google Search</option>
+            <option>Instagram</option>
+            <option>Facebook</option>
+            <option>WhatsApp</option>
+            <option>Friend / Family</option>
+            <option>School</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="message" class="text-xs uppercase tracking-wide text-fog block mb-2">Additional Message <span class="text-fog normal-case tracking-normal">(optional)</span></label>
+          <textarea id="message" name="message" rows="3" placeholder="Tell us about the player, their goals, or any questions you have..." class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 focus:border-grass outline-none transition"></textarea>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button type="button" id="backBtn" class="pill border border-white/25 font-semibold px-8 py-4 w-full sm:w-auto hover:border-grass hover:text-grass transition">← BACK</button>
+          <button type="button" id="submitBtn" class="glow-btn pill bg-grass text-ink font-semibold px-8 py-4 w-full sm:flex-1">BOOK FREE TRIAL</button>
+        </div>
+        <p class="text-xs text-fog text-center">No commitment • Our coach will contact you on WhatsApp to confirm your trial.</p>
+      </div>
+
+      <!-- SUCCESS STATE -->
+      <div id="successState" class="hidden text-center py-4">
+        <div class="w-16 h-16 rounded-full bg-grass/15 border border-grass flex items-center justify-center mx-auto mb-6">
+          <i data-lucide="check" class="w-8 h-8 text-grass"></i>
+        </div>
+        <h3 class="text-2xl font-black mb-3">YOU'RE ALMOST THERE! ⚽</h3>
+        <p class="text-fog text-sm mb-1">Thanks for your interest in Static Football Academy.</p>
+        <p class="text-fog text-sm mb-8">Our coach will contact you shortly on WhatsApp to confirm your trial session.</p>
+        <div class="glass rounded-xl2 p-6 text-left space-y-4 mb-8">
+          <div><div class="text-[11px] uppercase tracking-wide text-fog mb-1">Player</div><div class="font-semibold" id="summaryPlayer">—</div></div>
+          <div><div class="text-[11px] uppercase tracking-wide text-fog mb-1">Program</div><div class="font-semibold" id="summaryProgram">—</div></div>
+          <div><div class="text-[11px] uppercase tracking-wide text-fog mb-1">Location</div><div class="font-semibold" id="summaryLocation">—</div></div>
+        </div>
+        <button type="button" id="doneBtn" class="glow-btn pill bg-grass text-ink font-semibold px-8 py-4 w-full sm:w-auto">DONE</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-16 border-t border-white/10">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="flex flex-wrap justify-between gap-8 mb-10">
+      <div>
+        <div class="font-extrabold text-lg mb-2">STATIC <span class="text-grass">FOOTBALL ACADEMY</span></div>
+        <div class="text-fog text-sm">Maharaja Surajmal Stadium, West Delhi &amp; Mianwali Nagar, Delhi</div>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-fog">
+        <a href="#programs" class="hover:text-grass transition">Programs</a>
+        <a href="#locations" class="hover:text-grass transition">Locations</a>
+        <a href="#contact" class="hover:text-grass transition">Contact</a>
+      </div>
+      <div class="flex gap-4">
+        <a href="https://wa.me/919560631330" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:text-grass transition"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
+        <a href="https://www.instagram.com/sta.ticfootball" target="_blank" rel="noopener" aria-label="Instagram" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:text-grass transition">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="text-fog text-xs border-t border-white/10 pt-8">© 2026 Static Football Academy. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/919560631330" id="floatingWhatsapp" class="fixed bottom-6 left-6 z-40 w-14 h-14 rounded-full bg-grass text-ink flex items-center justify-center glow-btn shadow-xl">
+  <i data-lucide="message-circle" class="w-6 h-6"></i>
+</a>
+
+<!-- SCROLL TO TOP -->
+<button id="scrollTop" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full glass flex items-center justify-center">
+  <i data-lucide="arrow-up" class="w-5 h-5"></i>
+</button>
+
+<!-- STICKY MOBILE CTA -->
+<a href="#contact" class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-grass text-ink font-semibold text-center py-4">Book Free Trial</a>
+
+<script src="js/main.js"></script>
+<script src="js/custom-select.js"></script>
+<script src="js/booking-form.js"></script>
+
+</body>
+</html>
