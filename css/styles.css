@@ -9,14 +9,28 @@
   /* scroll progress */
   #progress{position:fixed; top:0; left:0; height:3px; background:linear-gradient(90deg,#4C6EF5,#8AA3FF); z-index:9998; width:0%; transition:width .1s linear;}
 
-  /* nav */
-  #navbar{position:fixed; top:0; left:0; right:0; z-index:100; transition:background .35s ease, backdrop-filter .35s ease, border-color .35s ease, padding .35s ease;}
-  #navbar.scrolled{background:rgba(10,10,10,0.75); backdrop-filter:blur(16px); border-bottom:1px solid rgba(255,255,255,0.08);}
-
+  /* nav
+     The glass background lives on ::before, always at full blur.
+     Only its OPACITY is transitioned, never the blur radius itself —
+     Safari/iOS does not reliably animate the blur amount of
+     backdrop-filter (transitioning blur(0px) -> blur(16px) frequently
+     renders as no blur at all on WebKit), so opacity is the only
+     property that's safe to transition here. */
+  #navbar{position:fixed; top:0; left:0; right:0; z-index:100; transition:padding .35s ease;}
+  #navbar::before{
+    content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+    background:rgba(10,10,10,0.75);
+    -webkit-backdrop-filter:blur(16px);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    opacity:0;
+    transition:opacity .35s ease;
+  }
+  #navbar.scrolled::before{opacity:1;}
+ 
   .navlink{position:relative; font-weight:500;}
   .navlink::after{content:""; position:absolute; left:0; bottom:-4px; width:0; height:1px; background:#4C6EF5; transition:width .25s ease;}
   .navlink:hover::after{width:100%;}
-
   /* glass card */
   .glass{background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); backdrop-filter:blur(14px);}
 
